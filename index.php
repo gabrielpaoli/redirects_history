@@ -1,398 +1,43 @@
-<?php
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  $newUrl = array(
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/horarios',
-    'www.aeplay.tv/{pais}/horarios',
-    'www.aeplay.tv/{pais}/movies/',
-    'latam.aeplay.tv/notas',
-    'www.aeplay.tv/{pais}/',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas/{variable}',
-    'latam.aeplay.tv/movies/{variable}',
-    'latam.aeplay.tv/donde-vernos',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/search',
-    'www.aeplay.tv/{pais}/',
-    'latam.aeplay.tv/series/{variable}',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/programas/',
-    'latam.aeplay.tv/personaje/{variable}',
-    'latam.aeplay.tv/personaje/',
-    'latam.aeplay.tv/content/{variable}',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/programas/',
-    'latam.aeplay.tv/juegos/{variable}',
-    'latam.aeplay.tv/encuesta/{variable}',
-    'latam.aeplay.tv/contacto',
-    'latam.aeplay.tv/quienes-somos',
-    'latam.aeplay.tv/donde-vernos',
-    'latam.aeplay.tv/terminos-uso',
-    'latam.aeplay.tv/políticas-autor',
-    'latam.aeplay.tv/políticas-privacidad',
-    'latam.aeplay.tv/rrpp-prensa',
-    'latam.aeplay.tv/publicidad',
-    'www.aeplay.tv',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/programas/',
-    'www.aeplay.tv/{pais}/horarios',
-    'www.aeplay.tv',
-    'latam.aeplay.tv/contacto',
-    'latam.aeplay.tv/quienes-somos',
-    'latam.aeplay.tv/microsites/{variable}',
-    'www.aeplay.tv/{pais}/serie/60-días-preso-el-experimento_nl0zjx',
-    'www.aeplay.tv/{pais}/serie/terapia-de-shock_leldln',
-    'www.aeplay.tv/{pais}/serie/hijas-de-la-poligamia_7bov9w',
-    'www.aeplay.tv/{pais}/movie/me-enamore-de-mi-alumno-la-historia-de-mary-key-letourneau_jgh84e',
-    'www.aeplay.tv/{pais}/movie/el-secuestro-de-elizabeth-smart-parte-1_dqoqgh',
-    'www.aeplay.tv/{pais}/serie/lo-mejor-de-policias-en-vivo_0ib2z8',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/serie/acumuladores-compulsivos',
-    'www.aeplay.tv/{pais}/serie/demasiado-joven-para-matar',
-    'www.aeplay.tv/{pais}/serie/esclavos-de-la-cienciologia',
-    'www.aeplay.tv/{pais}/serie/ncis-new-orleans',
-    'www.aeplay.tv/{pais}/serie/los-hermanos-menendez-la-historia-jamas-contada'
-  );
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-  $oldUrl = array(
-    '{pais}.canalaetv.com',
-    '{pais}.canalaetv.com/horarios-programas',
-    '{pais}.canalaetv.com/horarios-programas/{variable}',
-    '{pais}.canalaetv.com/movies',
-    '{pais}.canalaetv.com/aextras',
-    '{pais}.canalaetv.com/videos',
-    '{pais}.canalaetv.com/etiquetas/{variable}',
-    '{pais}.canalaetv.com/etiquetas/',
-    '{pais}.canalaetv.com/noticias/',
-    '{pais}.canalaetv.com/noticias/{variable}',
-    '{pais}.canalaetv.com/movies/{variable}',
-    '{pais}.canalaetv.com/content/donde-vernos',
-    '{pais}.canalaetv.com/google_vignette',
-    '{pais}.canalaetv.com/search/node',
-    '{pais}.canalaetv.com/videos/{variable}',
-    '{pais}.canalaetv.com/series/{variable}',
-    '{pais}.canalaetv.com/series/',
-    '{pais}.canalaetv.com/episode/{variable}',
-    '{pais}.canalaetv.com/episode/',
-    '{pais}.canalaetv.com/personaje/{variable}',
-    '{pais}.canalaetv.com/personaje/',
-    '{pais}.canalaetv.com/content/{variable}',
-    '{pais}.canalaetv.com/content/',
-    '{pais}.canalaetv.com/programas/',
-    '{pais}.canalaetv.com/programas/episodios/{variable}',
-    '{pais}.canalaetv.com/programas/episodios/',
-    '{pais}.canalaetv.com/juegos/{variable}',
-    '{pais}.canalaetv.com/encuesta/{variable}',
-    '{pais}.canalaetv.com/content/contacto',
-    '{pais}.canalaetv.com/quienes_somos',
-    '{pais}.canalaetv.com/content/donde-vernos',
-    '{pais}.canalaetv.com/terminos_de_uso',
-    '{pais}.canalaetv.com/politicas_derechos_autor',
-    '{pais}.canalaetv.com/politicas_de_privacidad',
-    '{pais}.canalaetv.com/rrpp_y_prensa',
-    '{pais}.canalaetv.com/publicidad',
-    'play.canalaetv.com',
-    'play.canalaetv.com/#/featured',
-    'play.canalaetv.com/#/shows',
-    'play.canalaetv.com/#/tv-schedule',
-    'play.canalaetv.com/#/notifications',
-    'play.canalaetv.com/#/help',
-    'play.canalaetv.com/#/aboutus',
-    '{pais}.canalaetv.com/microsites/{variable}',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
-    '{pais}.canalaetv.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
-    '{pais}.canalaetv.com/microsites/talent-land',
-    '{pais}.canalaetv.com/microsites/somos-justicia',
-    '{pais}.canalaetv.com/microsites/hablemosdebullying',
-    '{pais}.canalaetv.com/microsites/aesocial',
-    '{pais}.canalaetv.com/series/acumuladores-compulsivos',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
-    '{pais}.canalaetv.com/series/esclavos-de-la-cienciologia',
-    '{pais}.canalaetv.com/series/ncis-new-orleans-1',
-    '{pais}.canalaetv.com/series/los-hermanos-menendez-la-historia-jamas-contada'
-  );
-
-  $exceptions = array(
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
-    '{pais}.canalaetv.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
-    '{pais}.canalaetv.com/microsites/talent-land',
-    '{pais}.canalaetv.com/microsites/somos-justicia',
-    '{pais}.canalaetv.com/microsites/hablemosdebullying',
-    '{pais}.canalaetv.com/microsites/aesocial',
-    '{pais}.canalaetv.com/series/acumuladores-compulsivos',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
-    '{pais}.canalaetv.com/series/esclavos-de-la-cienciologia',
-    '{pais}.canalaetv.com/series/ncis-new-orleans-1',
-    '{pais}.canalaetv.com/series/los-hermanos-menendez-la-historia-jamas-contada',
-    '{pais}.canalaetv.com/series/fronteras-peligrosas'
-  );
-
-  function isPlayUrl($url){
-    $parts = explode('play.',$url);
-    if(sizeof($parts) > 1):
-      //return str_replace('',"{pais}.",$url);
-      return true;
-    endif;
-  }
-
-  function isException($url, $countryInUrl, $exceptions){
-    $url = convertUrlException($url, $countryInUrl, $countries);
-    $url = removeHtpps($url);
-
-    if(in_array($url, $exceptions)):
-      return $url;
-    else:
-      return false;
-    endif;
-  }
-
-
-  function convertUrlException($url, $countryInUrl, $countries){
-    if($countryInUrl):
-      $url = str_replace($countryInUrl .'.',"{pais}.",$url);
-    endif;
-    return $url;
-  }
-
-  $countries = array(
-    "ar",
-    "br",
-    "bo",
-    "cl",
-    "co",
-    "cr",
-    "do",
-    "ec",
-    "gt",
-    "hn",
-    "mx",
-    "ni",
-    "pa",
-    "pe",
-    "py",
-    "sv",
-    "uy",
-    "ve"
-  );
-
-  $urlsWithVariables = array(
-    '/horarios-programas/',
-    '/etiquetas/',
-    '/noticias/',
-    '/movies/',
-    '/videos/',
-    '/series/',
-    '/episode/',
-    '/personaje/',
-    '/content/',
-    '/episodios/',
-    '/juegos/',
-    '/encuesta/',
-    '/microsites/',
-    '/programas/'
-  );
-
-  function strposa($haystack, $needles=array(), $offset=0) {
-    $chr = array();
-    foreach($needles as $needle) {
-      $res = strpos($haystack, $needle, $offset);
-      if ($res !== false) $chr[$needle] = $res;
-    }
-    if(empty($chr)) return false;
-      
-    $parts = explode(key($chr), $haystack);
-    return $parts[1];
-  }
-
-  function removeHtpps($url){
-    $url = str_replace("https://","",$url);
-    $url = str_replace("http://","",$url);
-    return $url;
-  }
-
-  function countryInUrl($url, $countries){
-    $url = removeHtpps($url);
-    $parts = explode(".", $url);
-    if (in_array($parts[0], $countries)):
-      return $parts[0];
-    endif;
-    return null;
-  }
-
-  function variableInUrl($url, $urlsWithVariables){
-    $strposaUrl = strposa($url, $urlsWithVariables, 1);
-    if ($strposaUrl):
-      if($strposaUrl !== ''):
-        return $strposaUrl;
-      else:
-        return null;
-      endif;
-    else:
-      return null;
-    endif;
-  }
-
-  function mergeOldUrlAndNewUrl($oldUrl, $newUrl){
-    $oldUrl = array_values($oldUrl);
-    $newUrl = array_values($newUrl);
-
-    foreach($oldUrl as $key => $oldUrlInd):
-      $mergedUrls[] = array('oldUrl' => $oldUrlInd, 'newUrl' => $newUrl[$key]); 
-    endforeach;
-
-    return $mergedUrls;
-  }
-
-  function existParsedUrlInArrayOldUrl($url, $oldUrl){
-    if (in_array($url, $oldUrl)):
-      return $url;
-    else:
-      return null;
-    endif;
-  }
-
-  function matchNewUrl($url, $oldUrl, $newUrl){
-    $mergeOldUrlAndNewUrl = mergeOldUrlAndNewUrl($oldUrl, $newUrl);
-    foreach($mergeOldUrlAndNewUrl as $mergeOldUrlAndNewUrlInn):
-      if($url == $mergeOldUrlAndNewUrlInn['oldUrl']):
-        return $mergeOldUrlAndNewUrlInn['newUrl'];
-      endif;
-    endforeach;
-  }
-
-  function convertUrl($url, $countryInUrl, $variableInUrl){
-    if($countryInUrl):
-      $url = str_replace($countryInUrl .'.',"{pais}.",$url);
-    endif;
-    if($variableInUrl):
-      $url = str_replace($variableInUrl,"{variable}",$url);
-    endif;
-    return $url;
-  }
-
-  function reverseConvertUrl($url, $countryInUrl, $variableInUrl){
-    if($countryInUrl):
-      $url = str_replace("{pais}",$countryInUrl,$url);
-    endif;
-    if($variableInUrl):
-      $url = str_replace("{variable}",$variableInUrl,$url);
-    endif;
-    return $url;
-  }
-
-  function addHttps($url){
-    $url = 'https://' . $url;
-    return $url;
-  }
-
-  function parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions){
-
-    //Si es una excepcion
-
-    if(isPlayUrl($url)):
-      //OJO, LA URL VIENE SIN EL PAIS.
-      $url = matchNewUrl($url, $oldUrl, $newUrl);
-      $url = str_replace('{pais}', 'ar',$url);
-      $url = addHttps($url);
-      var_dump('La url final: ' . $url);
-      return $url;
-    endif;
-
-
-    $isException = isException($url, $countryInUrl, $exceptions);
-    if($isException):
-      $url = matchNewUrl($isException, $oldUrl, $newUrl);
-      $url = reverseConvertUrl($url, $countryInUrl, $variableInUrl);
-      $url = addHttps($url);
-    
-      var_dump('La url final: ' . $url);
-      return $url;
-    endif;
-
-    //Si no es una excepcion
-    $url = convertUrl($url, $countryInUrl, $variableInUrl);
-    $url = removeHtpps($url);
-    $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
-    $url = matchNewUrl($url, $oldUrl, $newUrl);
-    $url = reverseConvertUrl($url, $countryInUrl, $variableInUrl);
-
-    //Si la url no esta en el array hay que ver que hacemos
-
-    $url = addHttps($url);
-    var_dump('La url final: ' . $url);
-
-    return $url;
-  }
-
-?>
-
-
-<?php 
-  if(isset($_POST['url'])):
-    $url = $_POST['url'];
-    $countryInUrl = countryInUrl($url, $countries);
-    $variableInUrl = variableInUrl($url, $urlsWithVariables);
-    parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions);
-  endif;
-?>
-
-
-<form action="index.php" method="post">
-  URL:
-  <input type="text" name="url" value="">
-  <input type="submit" value="Submit">
-</form> 
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 
 <?php
+
+include('aeredirect.php');
 
 
 $test = array(
   'ar.canalaetv.com',
   'ar.canalaetv.com/horarios-programas',
-  'ar.canalaetv.com/horarios-programas/algo',
+  'ar.canalaetv.com/horarios-programas/cualquiervariable',
   'ar.canalaetv.com/movies',
   'ar.canalaetv.com/aextras',
   'ar.canalaetv.com/videos',
-  'ar.canalaetv.com/etiquetas/algo',
+  'ar.canalaetv.com/etiquetas/cualquiervariable',
   'ar.canalaetv.com/etiquetas/',
   'ar.canalaetv.com/noticias/',
-  'ar.canalaetv.com/noticias/algo',
-  'ar.canalaetv.com/movies/algo',
+  'ar.canalaetv.com/noticias/cualquiervariable',
+  'ar.canalaetv.com/movies/cualquiervariable',
   'ar.canalaetv.com/content/donde-vernos',
   'ar.canalaetv.com/google_vignette',
   'ar.canalaetv.com/search/node',
-  'ar.canalaetv.com/videos/algo',
-  'ar.canalaetv.com/series/algo',
+  'ar.canalaetv.com/videos/cualquiervariable',
+  'ar.canalaetv.com/series/cualquiervariable',
   'ar.canalaetv.com/series/',
-  'ar.canalaetv.com/episode/algo',
+  'ar.canalaetv.com/episode/cualquiervariable',
   'ar.canalaetv.com/episode/',
-  'ar.canalaetv.com/personaje/algo',
+  'ar.canalaetv.com/personaje/cualquiervariable',
   'ar.canalaetv.com/personaje/',
-  'ar.canalaetv.com/content/algo',
+  'ar.canalaetv.com/content/cualquiervariable',
   'ar.canalaetv.com/content/',
   'ar.canalaetv.com/programas/',
-  'ar.canalaetv.com/programas/episodios/algo',
+  'ar.canalaetv.com/programas/episodios/cualquiervariable',
   'ar.canalaetv.com/programas/episodios/',
-  'ar.canalaetv.com/juegos/algo',
-  'ar.canalaetv.com/encuesta/algo',
+  'ar.canalaetv.com/juegos/cualquiervariable',
+  'ar.canalaetv.com/encuesta/cualquiervariable',
   'ar.canalaetv.com/content/contacto',
   'ar.canalaetv.com/quienes_somos',
   'ar.canalaetv.com/content/donde-vernos',
@@ -408,7 +53,7 @@ $test = array(
   'play.canalaetv.com/#/notifications',
   'play.canalaetv.com/#/help',
   'play.canalaetv.com/#/aboutus',
-  'ar.canalaetv.com/microsites/algo',
+  'ar.canalaetv.com/microsites/cualquiervariable',
   'ar.canalaetv.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
   'ar.canalaetv.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
   'ar.canalaetv.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
@@ -425,14 +70,73 @@ $test = array(
   'ar.canalaetv.com/series/ncis-new-orleans-1',
   'ar.canalaetv.com/series/los-hermanos-menendez-la-historia-jamas-contada'
 );
-
-
-  foreach($test as $testInd):
-    $url = $testInd;
-    var_dump("url vieja: " . $testInd);
-    $countryInUrl = countryInUrl($url, $countries);
-    $variableInUrl = variableInUrl($url, $urlsWithVariables);
-    parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions);
-  endforeach;
-
 ?>
+
+<div class="container-fluid">
+
+<div style="text-align: center;">
+
+
+  <div class="col-md-12"><h1>Probar url</h1></div>
+
+
+
+  <form action="index.php" method="post">
+    <input type="text" name="url" value="">
+    <input type="submit" value="Submit">
+  </form> 
+
+
+
+  <div>
+    <?php 
+      if(isset($_POST['url'])):
+        $url = $_POST['url'];
+        $countryInUrl = countryInUrl($url, $countries);
+        $variableInUrl = variableInUrl($url, $urlsWithVariables);
+        print '<div>' . parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions) . '</div>';
+      endif;
+    ?>
+  </div>
+
+  
+
+</div>
+
+
+
+
+<div class="row">
+  <h1>Todas las variables</h1>
+</div>
+
+<div class="row">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Url vieja</th>
+        <th>Url nueva</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <?php
+
+        foreach($test as $testInd):
+          print '<tr>';
+            $url = $testInd;
+            print '<td>' . $testInd . '</td>';
+            $countryInUrl = countryInUrl($url, $countries);
+            $variableInUrl = variableInUrl($url, $urlsWithVariables);
+            print '<td>' . parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions) . '</td>';
+          print '</tr>';
+        endforeach;
+
+      ?>
+
+    </tbody>
+  </table>
+</div>
+
+
+</div>
