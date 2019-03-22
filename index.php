@@ -77,7 +77,10 @@ $test = array(
 <div style="text-align: center;">
 
 
-  <div class="col-md-12"><h1>Probar url</h1></div>
+  <div class="">
+    <h1>Probar url</h1>
+    <p><b>Por ejemplo: </b>https://ar.canalaetv.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar</p>
+  </div>
 
 
 
@@ -94,12 +97,12 @@ $test = array(
         $url = $_POST['url'];
         $countryInUrl = countryInUrl($url, $countries);
         $variableInUrl = variableInUrl($url, $urlsWithVariables);
-        print '<div>' . parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions) . '</div>';
+        print '<div><b>Resultado</b> ' . parseUrl($url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions) . '</div>';
       endif;
     ?>
   </div>
 
-  
+
 
 </div>
 
