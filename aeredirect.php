@@ -126,22 +126,22 @@
   );
 
   $exceptions = array(
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
-    '{pais}.canalaetv.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
-    '{pais}.canalaetv.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
-    '{pais}.canalaetv.com/microsites/talent-land',
-    '{pais}.canalaetv.com/microsites/somos-justicia',
-    '{pais}.canalaetv.com/microsites/hablemosdebullying',
-    '{pais}.canalaetv.com/microsites/aesocial',
-    '{pais}.canalaetv.com/series/acumuladores-compulsivos',
-    '{pais}.canalaetv.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
-    '{pais}.canalaetv.com/series/esclavos-de-la-cienciologia',
-    '{pais}.canalaetv.com/series/ncis-new-orleans-1',
-    '{pais}.canalaetv.com/series/los-hermanos-menendez-la-historia-jamas-contada',
-    '{pais}.canalaetv.com/series/fronteras-peligrosas'
+    '{pais}.aelatam.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
+    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
+    '{pais}.aelatam.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
+    '{pais}.aelatam.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
+    '{pais}.aelatam.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
+    '{pais}.aelatam.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
+    '{pais}.aelatam.com/microsites/talent-land',
+    '{pais}.aelatam.com/microsites/somos-justicia',
+    '{pais}.aelatam.com/microsites/hablemosdebullying',
+    '{pais}.aelatam.com/microsites/aesocial',
+    '{pais}.aelatam.com/series/acumuladores-compulsivos',
+    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
+    '{pais}.aelatam.com/series/esclavos-de-la-cienciologia',
+    '{pais}.aelatam.com/series/ncis-new-orleans-1',
+    '{pais}.aelatam.com/series/los-hermanos-menendez-la-historia-jamas-contada',
+    '{pais}.aelatam.com/series/fronteras-peligrosas'
   );
 
   function isPlayUrl($url){
