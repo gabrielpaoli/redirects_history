@@ -224,7 +224,7 @@
   function removeHtpps($url){
     $url = str_replace("https://","",$url);
     $url = str_replace("http://","",$url);
-    $url=rtrim($url,"/");
+    //$url=rtrim($url,"/");
     //var_dump($url);
     return $url;
   }
@@ -263,8 +263,13 @@
   }
 
   function existParsedUrlInArrayOldUrl($url, $oldUrl){
+    //var_dump($url . '/');
     if (in_array($url, $oldUrl)):
       return $url;
+    elseif(in_array($url . '/', $oldUrl)):
+      return $url . '/';
+    elseif(in_array(rtrim($url, "/"), $oldUrl)):
+      return rtrim($url, "/");
     else:
       return null;
     endif;
@@ -310,6 +315,7 @@
 
     if(isPlayUrl($url)):
       //OJO, LA URL VIENE SIN EL PAIS.
+      $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
       $url = matchNewUrl($url, $oldUrl, $newUrl);
       $url = str_replace('{pais}', 'ar',$url);
       $url = addHttps($url);
@@ -319,6 +325,7 @@
 
     $isException = isException($url, $countryInUrl, $exceptions);
     if($isException):
+      $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
       $url = matchNewUrl($isException, $oldUrl, $newUrl);
       $url = reverseConvertUrl($url, $countryInUrl, $variableInUrl);
       $url = addHttps($url);
@@ -334,7 +341,6 @@
       return null;
     endif;
     $url = reverseConvertUrl($url, $countryInUrl, $variableInUrl);
-
     //Si la url no esta en el array hay que ver que hacemos
 
     $url = addHttps($url);
