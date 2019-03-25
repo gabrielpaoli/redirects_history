@@ -8,9 +8,6 @@ $actual_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $countryInUrl = countryInUrl($actual_url, $countries);
 $variableInUrl = variableInUrl($actual_url, $urlsWithVariables);
 
-var_dump($actual_url);
-var_dump(parseUrl($actual_url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions));
-
 if(parseUrl($actual_url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions)):
   header("Location: " . parseUrl($actual_url, $countryInUrl, $variableInUrl, $oldUrl, $newUrl, $exceptions), true, 301);
   //exit();
