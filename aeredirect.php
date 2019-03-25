@@ -329,7 +329,7 @@
     $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
     $url = matchNewUrl($url, $oldUrl, $newUrl);
     if($url == null):
-      return 'No es una url valida para matchear';
+      return null;
     endif;
     $url = reverseConvertUrl($url, $countryInUrl, $variableInUrl);
 
