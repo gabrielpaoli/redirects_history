@@ -224,6 +224,8 @@
   function removeHtpps($url){
     $url = str_replace("https://","",$url);
     $url = str_replace("http://","",$url);
+    $url=rtrim($url,"/");
+    //var_dump($url);
     return $url;
   }
 
