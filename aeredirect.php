@@ -1,10 +1,12 @@
 <?php
 
+  $oldSiteGlobal = 'aelatam.com';
+
   $newUrl = array(
     'www.aeplay.tv/{pais}/',
     'www.aeplay.tv/{pais}/horarios',
     'www.aeplay.tv/{pais}/horarios',
-    'www.aeplay.tv/{pais}/movies/',
+    'www.aeplay.tv/{pais}/especiales/',
     'latam.aeplay.tv/notas',
     'www.aeplay.tv/{pais}/',
     'latam.aeplay.tv/notas',
@@ -55,121 +57,96 @@
     'www.aeplay.tv/{pais}/',
     'www.aeplay.tv/{pais}/',
     'www.aeplay.tv/{pais}/',
-    'www.aeplay.tv/{pais}/serie/acumuladores-compulsivos',
-    'www.aeplay.tv/{pais}/serie/demasiado-joven-para-matar',
-    'www.aeplay.tv/{pais}/serie/esclavos-de-la-cienciologia',
-    'www.aeplay.tv/{pais}/serie/ncis-new-orleans',
-    'www.aeplay.tv/{pais}/serie/los-hermanos-menendez-la-historia-jamas-contada'
+    'www.aeplay.tv/{pais}/serie/acumuladores-compulsivos_riwnt7',
+    'www.aeplay.tv/{pais}/serie/demasiado-joven-para-matar_kxyzb2',
+    'www.aeplay.tv/{pais}/serie/esclavos-de-la-cienciologia_zlqj7n',
+    'www.aeplay.tv/{pais}/serie/ncis-new-orleans_qoncnf',
+    'www.aeplay.tv/{pais}/serie/los-hermanos-menendez-la-historia-jamas-contada_jrghw6',
+    'www.aeplay.tv/{pais}/serie/fronteras-peligrosas-canada_41gcs3'
   );
 
 
   $oldUrl = array(
-    '{pais}.aelatam.com',
-    '{pais}.aelatam.com/horarios-programas',
-    '{pais}.aelatam.com/horarios-programas/{variable}',
-    '{pais}.aelatam.com/movies',
-    '{pais}.aelatam.com/aextras',
-    '{pais}.aelatam.com/videos',
-    '{pais}.aelatam.com/etiquetas/{variable}',
-    '{pais}.aelatam.com/etiquetas/',
-    '{pais}.aelatam.com/noticias/',
-    '{pais}.aelatam.com/noticias/{variable}',
-    '{pais}.aelatam.com/movies/{variable}',
-    '{pais}.aelatam.com/content/donde-vernos',
-    '{pais}.aelatam.com/google_vignette',
-    '{pais}.aelatam.com/search/node',
-    '{pais}.aelatam.com/videos/{variable}',
-    '{pais}.aelatam.com/series/{variable}',
-    '{pais}.aelatam.com/series/',
-    '{pais}.aelatam.com/episode/{variable}',
-    '{pais}.aelatam.com/episode/',
-    '{pais}.aelatam.com/personaje/{variable}',
-    '{pais}.aelatam.com/personaje/',
-    '{pais}.aelatam.com/content/{variable}',
-    '{pais}.aelatam.com/content/',
-    '{pais}.aelatam.com/programas/',
-    '{pais}.aelatam.com/programas/episodios/{variable}',
-    '{pais}.aelatam.com/programas/episodios/',
-    '{pais}.aelatam.com/juegos/{variable}',
-    '{pais}.aelatam.com/encuesta/{variable}',
-    '{pais}.aelatam.com/content/contacto',
-    '{pais}.aelatam.com/quienes_somos',
-    '{pais}.aelatam.com/content/donde-vernos',
-    '{pais}.aelatam.com/terminos_de_uso',
-    '{pais}.aelatam.com/politicas_derechos_autor',
-    '{pais}.aelatam.com/politicas_de_privacidad',
-    '{pais}.aelatam.com/rrpp_y_prensa',
-    '{pais}.aelatam.com/publicidad',
-    'play.aelatam.com',
-    'play.aelatam.com/#/featured',
-    'play.aelatam.com/#/shows',
-    'play.aelatam.com/#/tv-schedule',
-    'play.aelatam.com/#/notifications',
-    'play.aelatam.com/#/help',
-    'play.aelatam.com/#/aboutus',
-    '{pais}.aelatam.com/microsites/{variable}',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
-    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
-    '{pais}.aelatam.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
-    '{pais}.aelatam.com/microsites/talent-land',
-    '{pais}.aelatam.com/microsites/somos-justicia',
-    '{pais}.aelatam.com/microsites/hablemosdebullying',
-    '{pais}.aelatam.com/microsites/aesocial',
-    '{pais}.aelatam.com/series/acumuladores-compulsivos',
-    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
-    '{pais}.aelatam.com/series/esclavos-de-la-cienciologia',
-    '{pais}.aelatam.com/series/ncis-new-orleans-1',
-    '{pais}.aelatam.com/series/los-hermanos-menendez-la-historia-jamas-contada'
+    '{pais}.'.$oldSiteGlobal.'',
+    '{pais}.'.$oldSiteGlobal.'/horarios-programas',
+    '{pais}.'.$oldSiteGlobal.'/horarios-programas/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/movies',
+    '{pais}.'.$oldSiteGlobal.'/aextras',
+    '{pais}.'.$oldSiteGlobal.'/videos',
+    '{pais}.'.$oldSiteGlobal.'/etiquetas/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/etiquetas/',
+    '{pais}.'.$oldSiteGlobal.'/noticias/',
+    '{pais}.'.$oldSiteGlobal.'/noticias/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/movies/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/content/donde-vernos',
+    '{pais}.'.$oldSiteGlobal.'/google_vignette',
+    '{pais}.'.$oldSiteGlobal.'/search/node',
+    '{pais}.'.$oldSiteGlobal.'/videos/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/series/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/series/',
+    '{pais}.'.$oldSiteGlobal.'/episode/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/episode/',
+    '{pais}.'.$oldSiteGlobal.'/personaje/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/personaje/',
+    '{pais}.'.$oldSiteGlobal.'/content/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/content/',
+    '{pais}.'.$oldSiteGlobal.'/programas/',
+    '{pais}.'.$oldSiteGlobal.'/programas/episodios/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/programas/episodios/',
+    '{pais}.'.$oldSiteGlobal.'/juegos/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/encuesta/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/content/contacto',
+    '{pais}.'.$oldSiteGlobal.'/quienes_somos',
+    '{pais}.'.$oldSiteGlobal.'/content/donde-vernos',
+    '{pais}.'.$oldSiteGlobal.'/terminos_de_uso',
+    '{pais}.'.$oldSiteGlobal.'/politicas_derechos_autor',
+    '{pais}.'.$oldSiteGlobal.'/politicas_de_privacidad',
+    '{pais}.'.$oldSiteGlobal.'/rrpp_y_prensa',
+    '{pais}.'.$oldSiteGlobal.'/publicidad',
+    'play.'.$oldSiteGlobal.'',
+    'play.'.$oldSiteGlobal.'/#/featured',
+    'play.'.$oldSiteGlobal.'/#/shows',
+    'play.'.$oldSiteGlobal.'/#/tv-schedule',
+    'play.'.$oldSiteGlobal.'/#/notifications',
+    'play.'.$oldSiteGlobal.'/#/help',
+    'play.'.$oldSiteGlobal.'/#/aboutus',
+    '{pais}.'.$oldSiteGlobal.'/microsites/{variable}',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
+    '{pais}.'.$oldSiteGlobal.'/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/hijas-de-la-poligamia',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
+    '{pais}.'.$oldSiteGlobal.'/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
+    '{pais}.'.$oldSiteGlobal.'/microsites/talent-land',
+    '{pais}.'.$oldSiteGlobal.'/microsites/somos-justicia',
+    '{pais}.'.$oldSiteGlobal.'/microsites/hablemosdebullying',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aesocial',
+    '{pais}.'.$oldSiteGlobal.'/series/acumuladores-compulsivos',
+    '{pais}.'.$oldSiteGlobal.'/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
+    '{pais}.'.$oldSiteGlobal.'/series/esclavos-de-la-cienciologia',
+    '{pais}.'.$oldSiteGlobal.'/series/ncis-new-orleans-1',
+    '{pais}.'.$oldSiteGlobal.'/series/los-hermanos-menendez-la-historia-jamas-contada',
+    '{pais}.'.$oldSiteGlobal.'/series/fronteras-peligrosas'
   );
 
   $exceptions = array(
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
-    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/hijas-de-la-poligamia',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
-    '{pais}.aelatam.com/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
-    '{pais}.aelatam.com/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
-    '{pais}.aelatam.com/microsites/talent-land',
-    '{pais}.aelatam.com/microsites/somos-justicia',
-    '{pais}.aelatam.com/microsites/hablemosdebullying',
-    '{pais}.aelatam.com/microsites/aesocial',
-    '{pais}.aelatam.com/series/acumuladores-compulsivos',
-    '{pais}.aelatam.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
-    '{pais}.aelatam.com/series/esclavos-de-la-cienciologia',
-    '{pais}.aelatam.com/series/ncis-new-orleans-1',
-    '{pais}.aelatam.com/series/los-hermanos-menendez-la-historia-jamas-contada',
-    '{pais}.aelatam.com/series/fronteras-peligrosas'
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/60-dias-preso--el-experimento',
+    '{pais}.'.$oldSiteGlobal.'/microsites/demasiado-joven-para-matar/show/terapia-de-shock',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/hijas-de-la-poligamia',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/me-enamore-de-mi-alumno--la-historia-de-mary-kay-letourneau',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aeinvestiga/show/el-secuestro-de-elizabeth-smart',
+    '{pais}.'.$oldSiteGlobal.'/microsites/live-pd-policias-en-vivo/show/lo-mejor-de-policias-en-vivo',
+    '{pais}.'.$oldSiteGlobal.'/microsites/talent-land',
+    '{pais}.'.$oldSiteGlobal.'/microsites/somos-justicia',
+    '{pais}.'.$oldSiteGlobal.'/microsites/hablemosdebullying',
+    '{pais}.'.$oldSiteGlobal.'/microsites/aesocial',
+    '{pais}.'.$oldSiteGlobal.'/series/acumuladores-compulsivos',
+    '{pais}.'.$oldSiteGlobal.'/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar',
+    '{pais}.'.$oldSiteGlobal.'/series/esclavos-de-la-cienciologia',
+    '{pais}.'.$oldSiteGlobal.'/series/ncis-new-orleans-1',
+    '{pais}.'.$oldSiteGlobal.'/series/los-hermanos-menendez-la-historia-jamas-contada',
+    '{pais}.'.$oldSiteGlobal.'/series/fronteras-peligrosas'
   );
-
-  function isPlayUrl($url){
-    $parts = explode('play.',$url);
-    if(sizeof($parts) > 1):
-      //return str_replace('',"{pais}.",$url);
-      return true;
-    endif;
-  }
-
-  function isException($url, $countryInUrl, $exceptions){
-    $url = convertUrlException($url, $countryInUrl, $countries);
-    $url = removeHtpps($url);
-
-    if(in_array($url, $exceptions)):
-      return $url;
-    else:
-      return false;
-    endif;
-  }
-
-
-  function convertUrlException($url, $countryInUrl, $countries){
-    if($countryInUrl):
-      $url = str_replace($countryInUrl .'.',"{pais}.",$url);
-    endif;
-    return $url;
-  }
 
   $countries = array(
     "ar",
@@ -209,6 +186,72 @@
     '/programas/'
   );
 
+  $redirectTo302 = array(
+    'movies',
+    'series',
+    'microsites'
+  );
+
+  function redirectType($url, $urlsWithVariables, $redirectTo302, $exceptions, $countryInUrl){
+
+    $url = removeHtpps($url);
+    $url = rtrim($url, "/");
+
+    $urlInParts = explode('/', $url);
+    
+    $urlParsed = convertUrlException($url, $countryInUrl, $countries);
+    if(in_array($urlParsed, $exceptions)):
+      return 301;
+    endif;
+
+    foreach($urlsWithVariables as $urlsWithVariablesInn){
+      $word = str_replace('/', '', $urlsWithVariablesInn);
+      $pos = strpos($url, $urlsWithVariablesInn);
+      
+      if ($pos !== false) {
+        if(in_array($word, $redirectTo302)){
+          if($urlInParts[1] == $word):
+            if(isset($urlInParts[2]) && $urlInParts[2] != ''):
+              return 302;
+            endif;
+          endif;
+        }
+      }
+    }
+    return 301;
+  }
+
+  function isPlayUrl($url){
+    $parts = explode('play.',$url);
+    if(sizeof($parts) > 1):
+      return true;
+    endif;
+  }
+
+  function isException($url, $countryInUrl, $exceptions){
+    $url = convertUrlException($url, $countryInUrl, $countries);
+    $url = removeHtpps($url);
+
+    if (in_array($url, $exceptions)):
+      return $url;
+    elseif(in_array($url . '/', $exceptions)):
+      return $url . '/';
+    elseif(in_array(rtrim($url, "/"), $exceptions)):
+      return rtrim($url, "/");
+    else:
+      return false;
+    endif;
+
+  }
+
+
+  function convertUrlException($url, $countryInUrl, $countries){
+    if($countryInUrl):
+      $url = str_replace($countryInUrl .'.',"{pais}.",$url);
+    endif;
+    return $url;
+  }
+
   function strposa($haystack, $needles=array(), $offset=0) {
     $chr = array();
     foreach($needles as $needle) {
@@ -224,8 +267,6 @@
   function removeHtpps($url){
     $url = str_replace("https://","",$url);
     $url = str_replace("http://","",$url);
-    //$url=rtrim($url,"/");
-    //var_dump($url);
     return $url;
   }
 
@@ -263,7 +304,6 @@
   }
 
   function existParsedUrlInArrayOldUrl($url, $oldUrl){
-    //var_dump($url . '/');
     if (in_array($url, $oldUrl)):
       return $url;
     elseif(in_array($url . '/', $oldUrl)):
