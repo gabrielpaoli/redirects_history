@@ -1,6 +1,7 @@
 <?php
 
-  $oldSiteGlobal = 'canalaetv.com.br';
+  //$oldSiteGlobal = 'canalaetv.com.br';
+  $oldSiteGlobal = 'tuaetv.com';
 
   $newUrl = array(
     'www.aeplay.tv/br/',
