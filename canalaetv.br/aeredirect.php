@@ -1,12 +1,12 @@
 <?php
 
   //$oldSiteGlobal = 'canalaetv.com.br';
-  $oldSiteGlobal = 'tuaetv.com';
+  $oldSiteGlobal = 'canalaetv.com.br';
 
   $newUrl = array(
     'www.aeplay.tv/br/',
     'br.aeplay.tv/ancine',
-    'br.aeplay.tv/damien/noticia/hora-morta-o-momento-mais-temido-da-madrugada',
+    'br.aeplay.tv/damien/noticias/hora-morta-o-momento-mais-temido-da-madrugada',
     'br.aeplay.tv/noticias',
     'br.aeplay.tv/entre-em-contato',
     'br.aeplay.tv/onde-assistir',
