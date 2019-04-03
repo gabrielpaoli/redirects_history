@@ -1,18 +1,18 @@
 <?php
 
-  $oldSiteGlobal = 'aelatam.com';
+  $oldSiteGlobal = 'canalaetv.com';
 
   $newUrl = array(
     'www.aeplay.tv/{pais}/',
     'www.aeplay.tv/{pais}/horarios',
     'www.aeplay.tv/{pais}/horarios',
     'www.aeplay.tv/{pais}/especiales/',
-    'latam.aeplay.tv/notas',
+    'latam.aeplay.tv/noticias',
     'www.aeplay.tv/{pais}/',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas',
-    'latam.aeplay.tv/notas/{variable}',
+    'latam.aeplay.tv/noticias',
+    'latam.aeplay.tv/noticias',
+    'latam.aeplay.tv/noticias',
+    'latam.aeplay.tv/noticias/{variable}',
     'latam.aeplay.tv/movies/{variable}',
     'latam.aeplay.tv/donde-vernos',
     'www.aeplay.tv/{pais}/',
