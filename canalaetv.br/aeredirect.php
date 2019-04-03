@@ -371,6 +371,7 @@
 
     if(isPlayUrl($url)):
       //OJO, LA URL VIENE SIN EL PAIS.
+      $url = removeHtpps($url);
       $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
       $url = matchNewUrl($url, $oldUrl, $newUrl);
       $url = str_replace('{pais}', 'ar',$url);
