@@ -1,8 +1,7 @@
 <?php
 
-include('seuhistoryredirect.php');
+include('meulifetimeredirect.php');
 
-//$actual_url = "https://ar.canalaetv.com/microsites/demasiado-joven-para-matar/show/demasiado-joven-para-matar";
 $actual_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $countryInUrl = countryInUrl($actual_url, $countries);
