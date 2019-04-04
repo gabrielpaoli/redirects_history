@@ -6,7 +6,7 @@
 
 <?php
 
-include('milifetimeredirect.php');
+include('meulifetimeredirect.php');
 
 
 $test = array(
