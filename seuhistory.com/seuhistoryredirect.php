@@ -1,6 +1,6 @@
 <?php
 
-  $oldSiteGlobal = 'br.historyplay.tv';
+  $oldSiteGlobal = 'seuhistory.com';
 
   $newUrl = array(
     'www.historyplay.tv/br/',
