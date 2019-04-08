@@ -31,7 +31,7 @@
     'www.historyplay.tv',
     'www.historyplay.tv',
     'latam.historyplay.tv/noticias/',
-    'latam.historyplay.tv/noticias/[nota]',
+    'latam.historyplay.tv/noticias/{variable}',
     'latam.historyplay.tv/politicas-privacidad',
     'latam.historyplay.tv/políticas-autor',
     'www.historyplay.tv/{pais}/programas/',

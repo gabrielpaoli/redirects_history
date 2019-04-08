@@ -1,6 +1,6 @@
 <?php
 
-  $oldSiteGlobal = 'seuhistory.com';
+  $oldSiteGlobal = 'br.historyplay.tv';
 
   $newUrl = array(
     'www.historyplay.tv/br/',
@@ -24,7 +24,7 @@
     'www.historyplay.tv/br/',
     'www.historyplay.tv/br/exclusivo-da-web',
     'br.historyplay.tv/hoje-na-historia/',
-    'seuhistory.com/hoje-na-historia/{variable}',
+    'br.historyplay.tv/hoje-na-historia/{variable}',
     'www.historyplay.tv/br/horarios',
     'www.historyplay.tv/br/history2',
     'www.historyplay.tv/br/history2',
@@ -33,7 +33,7 @@
     'br.historyplay.tv/jogos/{variable}',
     'br.historyplay.tv/entre-em-contato',
     'br.historyplay.tv/noticias/',
-    'seuhistory.com/noticias/{variable}',
+    'br.historyplay.tv/noticias/{variable}',
     'br.historyplay.tv/onde-assitir',
     'br.historyplay.tv/politica-privacidade',
     'br.historyplay.tv/política-remocao',
