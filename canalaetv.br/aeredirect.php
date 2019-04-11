@@ -116,7 +116,7 @@
     'play.'. $oldSiteGlobal .'/#/featured',
     'play.'. $oldSiteGlobal .'/#/help',
     'play.'. $oldSiteGlobal .'/#/notifications',
-    'play.'. $oldSiteGlobal .'/#/shows',
+    'play.'.$oldSiteGlobal.'/#/shows/{variable}',
     'play.'. $oldSiteGlobal .'/#/tv-schedule',
     ''. $oldSiteGlobal .'/microsites/{variable}',
     ''. $oldSiteGlobal .'/microsites/aeinvestiga/show/filhas-da-poligamia',
@@ -280,6 +280,11 @@
       if ($res !== false) $chr[$needle] = $res;
     }
     if(empty($chr)) return false;
+
+    if(sizeof($chr) > 1):
+      $parts = explode('/microsites/', $haystack);
+      return $parts[1];
+    endif;
       
     $parts = explode(key($chr), $haystack);
     return $parts[1];

@@ -62,7 +62,7 @@ $test = array(
     'play.'.$oldSiteGlobal.'/#/help',
     'play.'.$oldSiteGlobal.'/#/notifications',
     'play.'.$oldSiteGlobal.'/#/show/1109',
-    'play.'.$oldSiteGlobal.'/#/shows',
+    'play.'.$oldSiteGlobal.'/#/shows/{variable}',
     'play.'.$oldSiteGlobal.'/#/tv-schedule',
     'play.'.$oldSiteGlobal.'/episode/{variable}',
     'unaidea.'.$oldSiteGlobal.'/{variable}',

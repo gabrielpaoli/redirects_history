@@ -93,7 +93,7 @@
     'play.'.$oldSiteGlobal.'/#/featured',
     'play.'.$oldSiteGlobal.'/#/help',
     'play.'.$oldSiteGlobal.'/#/notifications',
-    'play.'.$oldSiteGlobal.'/#/shows',
+    'play.'.$oldSiteGlobal.'/#/shows/{variable}',
     'play.'.$oldSiteGlobal.'/#/tv-schedule',
     '{pais}.'.$oldSiteGlobal.'/microsites/juguemos-igual',
     '{pais}.'.$oldSiteGlobal.'/microsites/juguemos-igual/noticias/el-panorama-del-futbol-femenino-en-america-latina',
@@ -237,7 +237,12 @@
       if ($res !== false) $chr[$needle] = $res;
     }
     if(empty($chr)) return false;
-      
+
+    if(sizeof($chr) > 1):
+      $parts = explode('/microsites/', $haystack);
+      return $parts[1];
+    endif;
+          
     $parts = explode(key($chr), $haystack);
     return $parts[1];
   }

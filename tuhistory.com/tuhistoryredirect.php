@@ -37,7 +37,7 @@
     'www.historyplay.tv/{pais}/programas/',
     'www.historyplay.tv/{pais}/programa/{variable}',
     'www.historyplay.tv/{pais}/programas/',
-    'www.historyplay.tv/{pais}/programas/{variable}',
+    'latam.historyplay.tv/programas/{variable}',
     'latam.historyplay.tv/publicidad',
     'latam.historyplay.tv/quienes-somos',
     'www.historyplay.tv',
@@ -126,7 +126,7 @@
     'play.'.$oldSiteGlobal.'/#/help',
     'play.'.$oldSiteGlobal.'/#/notifications',
     'play.'.$oldSiteGlobal.'/#/show/1109',
-    'play.'.$oldSiteGlobal.'/#/shows',
+    'play.'.$oldSiteGlobal.'/#/shows/{variable}',
     'play.'.$oldSiteGlobal.'/#/tv-schedule',
     'play.'.$oldSiteGlobal.'/episode/{variable}',
     'unaidea.'.$oldSiteGlobal.'/{variable}',
@@ -194,7 +194,8 @@
     '/encuesta/',
     '/microsites/',
     '/programas/',
-    '/programa/'
+    '/programa/',
+    '/zonas/'
   );
 
   $redirectTo302 = array(
@@ -271,6 +272,11 @@
     }
     if(empty($chr)) return false;
       
+    if(sizeof($chr) > 1):
+      $parts = explode('/microsites/', $haystack);
+      return $parts[1];
+    endif;
+
     $parts = explode(key($chr), $haystack);
     return $parts[1];
   }
@@ -342,6 +348,7 @@
     if($variableInUrl):
       $url = str_replace($variableInUrl,"{variable}",$url);
     endif;
+
     return $url;
   }
 
@@ -385,6 +392,7 @@
     endif;
 
     //Si no es una excepcion
+    //var_dump($variableInUrl);
     $url = convertUrl($url, $countryInUrl, $variableInUrl);
     $url = removeHtpps($url);
     $url = existParsedUrlInArrayOldUrl($url, $oldUrl);
