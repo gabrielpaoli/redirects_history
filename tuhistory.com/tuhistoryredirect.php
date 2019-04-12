@@ -153,7 +153,9 @@
     '{pais}.'.$oldSiteGlobal.'/programas/el-precio-de-la-historia',
     '{pais}.'.$oldSiteGlobal.'/programas/locos-por-los-autos',
     '{pais}.'.$oldSiteGlobal.'/programas/rutas-mortales',
-    '{pais}.'.$oldSiteGlobal.'/programas/quien-da-ma'
+    '{pais}.'.$oldSiteGlobal.'/programas/quien-da-ma',
+    '{pais}.'.$oldSiteGlobal.'/microsites/especiales-de-navidad',
+    '{pais}.'.$oldSiteGlobal.'/microsites/especiales-de-navidad/{variable}'    
   );
 
   $countries = array(
@@ -195,7 +197,10 @@
     '/microsites/',
     '/programas/',
     '/programa/',
-    '/zonas/'
+    '/zonas/',
+    '/region/',
+    '/galeria/',
+    '/expandido/'
   );
 
   $redirectTo302 = array(
@@ -240,9 +245,21 @@
     endif;
   }
 
+  function isNavidad($url){
+
+    if (strpos($url, '/especiales-de-navidad/videos/') !== false) {
+      return true;
+    }
+
+  }
+
   function isException($url, $countryInUrl, $exceptions){
     $url = convertUrlException($url, $countryInUrl, $countries);
     $url = removeHtpps($url);
+
+    if(isNavidad($url)):
+      return '{pais}.tuhistory.com/microsites/especiales-de-navidad';
+    endif;  
 
     if (in_array($url, $exceptions)):
       return $url;
