@@ -12,13 +12,13 @@
     'www.historyplay.tv/br/',
     'br.historyplay.tv/biografia/',
     'br.historyplay.tv/biografia/{variable}',
-    'br.historyplay.tv/biografias/',
+    'br.historyplay.tv/biografia/',
     'br.historyplay.tv/biografias/{variable}',
     'www.historyplay.tv/br/',
     'br.historyplay.tv/content/{variable}',
     'www.historyplay.tv/br/',
-    'www.historyplay.tv/br/',
-    'www.historyplay.tv/br/',
+    'br.historyplay.tv/biografia/',
+    'br.historyplay.tv/biografia/',
     'br.historyplay.tv/expandido/{variable}',
     'br.historyplay.tv/galeria/{variable}',
     'www.historyplay.tv/br/',
@@ -34,7 +34,7 @@
     'br.historyplay.tv/entre-em-contato',
     'br.historyplay.tv/noticias/',
     'br.historyplay.tv/noticias/{variable}',
-    'br.historyplay.tv/onde-assitir',
+    'www.historyplay.tv/br/',
     'br.historyplay.tv/politica-privacidade',
     'br.historyplay.tv/política-remocao',
     'www.historyplay.tv/br/programas/',
@@ -54,8 +54,8 @@
     'www.historyplay.tv/br/',
     'www.historyplay.tv/br/',
     'www.historyplay.tv/br/',
-    'www.historyplay.tv/br/serie/desafio-sob-fogo_tflvqn',
-    'www.historyplay.tv/br/serie/desafio-sob-fogo_tflvqn',
+    'br.historyplay.tv/microsites/tercas-de-fogo',
+    'br.historyplay.tv/microsites/tercas-de-fogo',
     'www.historyplay.tv/br/',
     'www.historyplay.tv/br/',
     'www.historyplay.tv/br/',
@@ -97,7 +97,7 @@
     ''. $oldSiteGlobal .'/biografia/',
     ''. $oldSiteGlobal .'/biografia/{variable}',
     ''. $oldSiteGlobal .'/biografias/',
-    ''. $oldSiteGlobal .'/biografias/adolf-hitler',
+    ''. $oldSiteGlobal .'/biografias/{variable}',
     ''. $oldSiteGlobal .'/content/',
     ''. $oldSiteGlobal .'/content/{variable}',
     ''. $oldSiteGlobal .'/etiquetas/',
@@ -183,7 +183,9 @@
     $oldSiteGlobal.'/microsites/trato-feito-e-desafio-sob-fogo',
     $oldSiteGlobal.'/microsites/segundas-de-carros/show/trato-feito',
     $oldSiteGlobal.'/programas/desafio-sob-fogo',
-    $oldSiteGlobal.'/programas/cacadores-de-reliquias'
+    $oldSiteGlobal.'/programas/cacadores-de-reliquias',
+    $oldSiteGlobal .'/programas/episodios/{variable}',
+    $oldSiteGlobal .'/microsites/cacando-hitler/home'
   );
 
   $countries = array(
@@ -218,13 +220,13 @@
     '/jogos/',
     '/noticias/',
     '/programas/',
-    '/episodios/',
     '/region/',
     '/videos/',
     '/microsites/',
     '/show/',
     '/noticia/',
     '/episode/',
+    '/biografias/'
   );
 
   $redirectTo302 = array(
@@ -267,9 +269,39 @@
     endif;
   }
 
+  function isSuperException($url){
+    if (strpos($url, '/programas/episodios') !== false) {
+      return 'seuhistory.com/programas';
+    }elseif (strpos($url, 'microsites/carweek') !== false) {
+      return 'seuhistory.com/microsites/carweek/';
+    }elseif (strpos($url, 'microsites/desafio-sob-fogo') !== false) {
+      return 'seuhistory.com/microsites/desafio-sob-fogo/';
+    }elseif (strpos($url, 'microsites/invasao-alienigena') !== false) {
+      return 'seuhistory.com/microsites/invasao-alienigena/{variable}/';
+    }elseif (strpos($url, '/microsites/o-juizo-final') !== false) {
+      return 'seuhistory.com/microsites/o-juizo-final/{variable}/';
+    }elseif (strpos($url, '/microsites/o-ultimo-reino') !== false) {
+      return 'seuhistory.com/microsites/o-ultimo-reino/{variable}/';
+    }elseif (strpos($url, '/microsites/raizes') !== false) {
+      return 'seuhistory.com/microsites/raizes/{variable}/';
+    }elseif (strpos($url, '/microsites/sozinhos') !== false) {
+      return 'seuhistory.com/microsites/sozinhos/{variable}/';
+    }elseif (strpos($url, '/microsites/templarios') !== false) {
+      return 'seuhistory.com/microsites/templarios/{variable}/';
+    }elseif (strpos($url, '/microsites/a-rebeliao-dos-barbaros') !== false) {
+      return 'seuhistory.com/microsites/a-rebeliao-dos-barbaros/{variable}';
+    }  
+
+    return false;
+  }
+
   function isException($url, $countryInUrl, $exceptions){
     $url = convertUrlException($url, $countryInUrl, $countries);
     $url = removeHtpps($url);
+
+    if(isSuperException($url)):
+      return isSuperException($url);
+    endif;  
 
     if (in_array($url, $exceptions)):
       return $url;
